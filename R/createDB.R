@@ -163,11 +163,11 @@ createDB <- function(){
   message("Use the function `dbListTables` from the DBI package to see what tables are available in MooMy.")
   #DBI::dbListTables(moomy)
 
-  moomyQs <- c(
+  questions <- c(
     "What is the average age of users who bought furniture?",
     "How many distinct males sold video games?",
     "How many distinct females bought jewelry?",
     "What is the MM_ID of the user who was apart of the most transactions (buy or sell)?"
   )
-  assign("moomyQs",moomyQs,env = .GlobalEnv)
+  assign("questions",questions,env = .GlobalEnv)
 }
