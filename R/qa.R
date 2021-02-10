@@ -1,7 +1,7 @@
 #' qa
 #'
-#' @param sql_code 
-#' @param Q 
+#' @param sql_code
+#' @param Q
 #'
 #' @return
 #' @export
@@ -17,15 +17,15 @@ qa <- function(sql_code, Q = 0){
   }
   # Execute the provided query
   output <- DBI::dbGetQuery(moomy, sql_code)
-  
+
   # Formatting output object based on the question
   if(Q %in% c(1,2,3)){
     output <- round(output[[1]],5)
   }
-  
+
   # Answer vector
   answers <- c(30.10526, 17, 165, "MM-134")
-  
+
   if(exists("output")){
     suppressWarnings(
       if(output == answers[Q]){
