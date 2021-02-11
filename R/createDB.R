@@ -1,4 +1,4 @@
-#' createDB
+#' createDB Creates the `moomy` database in the Global Environment
 #'
 #' @return
 #' @export
@@ -167,7 +167,10 @@ createDB <- function(){
     "What is the average age of users who bought furniture?",
     "How many distinct males sold video games?",
     "How many distinct females bought jewelry?",
-    "What is the MM_ID of the user who was apart of the most transactions (buy or sell)?"
+    "What is the MM_ID of the user who was apart of the most transactions (buy or sell)?",
+    "What is the highest costing transaction ID?",
+    "How many users apparently sold a product to themselves?",
+    "How many transactions are in our database?"
   )
   assign("questions",questions,env = .GlobalEnv)
 }

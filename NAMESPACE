@@ -2,3 +2,4 @@
 
 export(createDB)
 export(qa)
+export(showAnswer)
