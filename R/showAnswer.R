@@ -106,6 +106,23 @@ showAnswer <- function(Q = 0){
    "
   }
 
+   if(Q == 8){
+      return_query <- "
+
+   select category from
+   (select category , avg(tc.cost) as mean_cost
+   from transaction_products tp
+   inner join transaction_costs tc
+   on tp.TRANSACTION_ID = tc.TRANID
+   inner join product_map pm
+   on tp.product_id = pm.pid
+   group by category)
+   order by mean_cost desc
+   limit 1
+
+   "
+   }
+
 
   return(writeLines(return_query))
 }
