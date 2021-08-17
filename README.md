@@ -30,5 +30,7 @@ The `questions` vector provide the means for the user to gain comfortability wit
 
 Please refer to the **Description** and **Additional Notes** section in order to answer this question.
 
-
-
+#### Helpful Hints
+- This is a financial reconciliation to determine the amount MooMy makes, and is highly aduitable (meaning it can't be incorrect)
+- The logged transactions with missing buyer IDs represent "blanket" transactions for these payments to be processed
+- This project _should_ be completed with each step used documented clearly
