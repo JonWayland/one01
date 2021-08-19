@@ -24,7 +24,7 @@ qa <- function(sql_code, Q = 0){
   }
 
   # Answer vector
-  answers <- c(30.10526, 17, 150, "MM-134", "TC-10011821", 3, 5000, "Vehicles")
+  answers <- c(30.10526, 17, 150, "MM-134", "TC-10011821", 3, 5000, "Vehicles",2500)
 
   if(exists("output")){
     # Show output
