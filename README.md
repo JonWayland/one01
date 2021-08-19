@@ -21,6 +21,7 @@ This function generates the SQLite database, `moomy`, as well as a vector of bus
 - How many users apparently sold a product to themselves?
 - How many transactions are in our database?
 - What is the most expensive product category on average (not the product ID)?
+- How many transactions are missing a buyer ID?
 
 ## `qa()`
 This function maps to the `questions` vector and allows the user to input a SQL query to attempt to answer the specific business question. If the query is incorrect, the user will be given a message telling them so. Similarly, if the SQL query is correct then the user will be informed that they were successful.
