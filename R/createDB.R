@@ -171,7 +171,8 @@ createDB <- function(){
     "What is the highest costing transaction ID?",
     "How many users apparently sold a product to themselves?",
     "How many transactions are in our database?",
-    "What is the most expensive product category on average (not the product ID)?"
+    "What is the most expensive product category on average (not the product ID)?",
+    "How many transactions are missing a buyer ID?"
   )
   assign("questions",questions,env = .GlobalEnv)
 }
