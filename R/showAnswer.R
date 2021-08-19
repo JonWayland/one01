@@ -123,6 +123,15 @@ showAnswer <- function(Q = 0){
    "
    }
 
+   if(Q == 9){
+      return_query <- "
+
+   select count(DISTINCT TRANSACTION_ID) FROM TRANSACTION_DETAILS
+   WHERE BUYER_MM_ID IS NULL
+
+   "
+   }
+
 
   return(writeLines(return_query))
 }
