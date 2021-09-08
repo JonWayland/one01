@@ -181,4 +181,14 @@ createDB <- function(db = "moomy"){
     )
     assign("questions",questions,env = .GlobalEnv)
   }
+  if(db == 'healthcon'){
+    fh <- read.csv("https://raw.githubusercontent.com/JonWayland/Fake-Healthcare/master/HP-Universal_DF.csv")
+
+    # In-memory database in R
+    healthcon <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
+    assign("healthcon", healthcon, env = .GlobalEnv)
+    message("The `healthcon` database connection is now set.")
+
+    DBI::dbWriteTable(healthcon, "FAKE_HEALTHCARE", fh)
+  }
 }
