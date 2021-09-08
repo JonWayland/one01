@@ -1,5 +1,5 @@
 # one01
-The `one01` R package is built for training users on basic SQL coding for a real-world context. The database this package uses is built with SQLite, and thus the SQL syntax it uses follows the [SQLite version of the language](https://www.sqlite.org/lang.html).
+The `one01` R package was originally built for training users on basic SQL coding in a real-world context. Though it still serves this purpose, it has since grown into a wrapper for the [DBI](https://dbi.r-dbi.org/) package. The databases this package uses are built with SQLite, and thus the SQL syntax it uses follows the [SQLite version of the language](https://www.sqlite.org/lang.html).
 
 `devtools::install_github("JonWayland/one01")`
 
