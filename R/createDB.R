@@ -5,7 +5,12 @@
 #'
 #' @examples
 #' createDB()
-createDB <- function(){
+createDB <- function(db = "moomy"){
+  # If `db` is not specified then MooMy is the resulting database
+  if(!db %in% c('moomy')){
+    stop('The specified `db` does not exist. Please use one of the following: moomy')
+  }
+
   require(DBI)
   require(RSQLite)
 
