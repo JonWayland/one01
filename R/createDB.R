@@ -7,8 +7,8 @@
 #' createDB()
 createDB <- function(db = "moomy"){
   # If `db` is not specified then MooMy is the resulting database
-  if(!db %in% c('moomy')){
-    stop('The specified `db` does not exist. Please use one of the following: moomy')
+  if(!db %in% c('moomy','healthcon')){
+    stop('The specified `db` does not exist. Please use one of the following: moomy, healthcon')
   }
 
   require(DBI)
