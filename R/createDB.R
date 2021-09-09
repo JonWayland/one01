@@ -190,5 +190,7 @@ createDB <- function(db = "moomy"){
     message("The `healthcon` database connection is now set.")
 
     DBI::dbWriteTable(healthcon, "FAKE_HEALTHCARE", fh)
+
+    message("Use the function `dbListTables` from the DBI package to see what tables are available in healthcon Ex: DBI::dbListTables(healthcon)")
   }
 }
