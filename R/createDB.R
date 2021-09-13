@@ -181,6 +181,9 @@ createDB <- function(db = "moomy"){
     )
     assign("questions",questions,env = .GlobalEnv)
   }
+  ######################################
+  ### Setting the healthcon database ###
+  ######################################
   if(db == 'healthcon'){
     fh <- read.csv("https://raw.githubusercontent.com/JonWayland/Fake-Healthcare/master/HP-Universal_DF.csv")
 
