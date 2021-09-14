@@ -185,7 +185,12 @@ createDB <- function(db = "moomy"){
   ### Setting the healthcon database ###
   ######################################
   if(db == 'healthcon'){
+
+    # Reading in the fake healthcare data generated for tutorials
     fh <- read.csv("https://raw.githubusercontent.com/JonWayland/Fake-Healthcare/master/HP-Universal_DF.csv")
+
+    # Placeholder to read in the ICD-10 specific data generated in open health
+
 
     # In-memory database in R
     healthcon <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
