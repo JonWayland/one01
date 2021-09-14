@@ -193,6 +193,8 @@ createDB <- function(db = "moomy"){
 
     # Placeholder to read in the ADI data
 
+    # Placeholder for poverty index (state of FL only)
+
 
     # In-memory database in R
     healthcon <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
