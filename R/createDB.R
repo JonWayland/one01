@@ -191,6 +191,8 @@ createDB <- function(db = "moomy"){
 
     # Placeholder to read in the ICD-10 specific data generated in open health
 
+    # Placeholder to read in the ADI data
+
 
     # In-memory database in R
     healthcon <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
