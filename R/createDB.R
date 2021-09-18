@@ -185,6 +185,7 @@ createDB <- function(db = "moomy"){
   ### Setting the healthcon database ###
   ######################################
   if(db == 'healthcon'){
+    message("The `healthcon` database gathers data from publicly available sources on the internet.")
 
     # Reading in the fake healthcare data generated for tutorials
     fh <- read.csv("https://raw.githubusercontent.com/JonWayland/Fake-Healthcare/master/HP-Universal_DF.csv")
@@ -195,6 +196,13 @@ createDB <- function(db = "moomy"){
 
     # Placeholder for poverty index (state of FL only)
 
+    # Chronic Disease and Health Promotion Data (2020)
+    # cdc <- read.csv("https://chronicdata.cdc.gov/api/views/qnzd-25i4/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
+    # cdc$GEO_LONG <- as.numeric(gsub(" .*","",gsub("POINT \\(","",cdc$Geolocation)))
+    # cdc$GEO_LAT <- as.numeric(gsub(".* ","",gsub("POINT \\(|)","",cdc$Geolocation)))
+    # colnames(cdc) <- toupper(c("Year", colnames(cdc)[-1]))
+    # saveRDS(cdc,file="data\\cdc.rds")
+    cdc <- readRDS("data\\cdc.rds")
 
     # In-memory database in R
     healthcon <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
@@ -202,7 +210,9 @@ createDB <- function(db = "moomy"){
     message("The `healthcon` database connection is now set.")
 
     DBI::dbWriteTable(healthcon, "FAKE_HEALTHCARE", fh)
+    DBI::dbWriteTable(healthcon, "CDC_LOCAL", cdc)
 
     message("Use the function `dbListTables` from the DBI package to see what tables are available in healthcon Ex: DBI::dbListTables(healthcon)")
+    message("\nThe data residing in the CDC_LOCAL table was sourced from the following website on 9/18/2021:\n https://chronicdata.cdc.gov/500-Cities-Places/PLACES-Local-Data-for-Better-Health-ZCTA-Data-2020/qnzd-25i4/data")
   }
 }
