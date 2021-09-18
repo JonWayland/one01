@@ -217,5 +217,6 @@ createDB <- function(db = "moomy"){
 
     message("Use the function `dbListTables` from the DBI package to see what tables are available in healthcon Ex: DBI::dbListTables(healthcon)")
     message("\nThe data residing in the CDC_LOCAL table was sourced from the following website on 9/18/2021:\n https://chronicdata.cdc.gov/500-Cities-Places/PLACES-Local-Data-for-Better-Health-ZCTA-Data-2020/qnzd-25i4/data")
+    message("The data residing in the ICD10_MAP table comes from a variety of sources. Please contact Jon Wayland (jonwayland47@gmail.com) for proper citation and source code.")
   }
 }
