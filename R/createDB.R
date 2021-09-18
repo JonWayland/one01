@@ -191,6 +191,8 @@ createDB <- function(db = "moomy"){
     fh <- read.csv("https://raw.githubusercontent.com/JonWayland/Fake-Healthcare/master/HP-Universal_DF.csv")
 
     # Placeholder to read in the ICD-10 specific data generated in open health
+    icd10 <- readRDS("data\\icd10.rds")
+    colnames(icd10) <- toupper(colnames(icd10))
 
     # Placeholder to read in the ADI data
 
@@ -211,6 +213,7 @@ createDB <- function(db = "moomy"){
 
     DBI::dbWriteTable(healthcon, "FAKE_HEALTHCARE", fh)
     DBI::dbWriteTable(healthcon, "CDC_LOCAL", cdc)
+    DBI::dbWriteTable(healthcon, "ICD10_MAP", icd10)
 
     message("Use the function `dbListTables` from the DBI package to see what tables are available in healthcon Ex: DBI::dbListTables(healthcon)")
     message("\nThe data residing in the CDC_LOCAL table was sourced from the following website on 9/18/2021:\n https://chronicdata.cdc.gov/500-Cities-Places/PLACES-Local-Data-for-Better-Health-ZCTA-Data-2020/qnzd-25i4/data")
