@@ -33,6 +33,7 @@ dbPull <- function(
   if(!exists("timeTrack")){
     timeTrack <- data.frame(
       database = as.character("one"),
+      pass_fail = as.character("Pass"),
       minutes = as.numeric(1),
       run_time = Sys.time(),
       run_time_desc = as.character("now"),
@@ -49,6 +50,7 @@ dbPull <- function(
   if(track){
     timeTrack <- rbind(timeTrack, data.frame(
       database = deparse(substitute(conn)),
+      pass_fail = "Pass", # This needs to be the result of a tryCatch
       minutes = to_mins(end_time - start_time),
       run_time = start_time,
       run_time_desc = strftime(start_time, format="%I:%M %P", tz = "America/New_York"),
