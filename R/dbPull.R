@@ -55,5 +55,6 @@ dbPull <- function(
       rows = nrow(dfr),
       columns = ncol(dfr)
     ))
+    assign("timeTrack", timeTrack, envir = .GlobalEnv)
   }
 }
