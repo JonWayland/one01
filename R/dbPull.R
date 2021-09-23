@@ -16,6 +16,18 @@ dbPull <- function(
   reset_track = FALSE
 ){
   require(DBI)
+  # Database Exists Exception
+  if(!exists(deparse(substitute(DB)))){
+    stop(simpleError(paste0("The database connection `",deparse(substitute(DB)),"` isn't specified. Please be sure to connect to your respective database.")))
+  }
+  # Converting other units of time into minutes
+  to_mins <- function(difftime){
+    if(units(difftime) == "secs"){mins <- as.numeric(difftime)/60}
+    if(units(difftime) == "hours"){mins <- as.numeric(difftime)*60}
+    if(units(difftime) == "mins"){mins <- as.numeric(difftime)}
+    if(units(difftime) == "days"){mins <- as.numeric(difftime)*60*24}
+    return(mins)
+  }
 
   # If the timeTrack object does not exist
   if(!exists("timeTrack")){
