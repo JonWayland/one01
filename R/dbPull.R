@@ -47,7 +47,7 @@ dbPull <- function(
 
   if(track){
     timeTrack <- rbind(timeTrack, data.frame(
-      database = , # Needs to be parsed from the `conn` parameter
+      database = deparse(substitute(conn)),
       minutes = end_time - start_time, # Needs to be converted to minutes
       run_time = start_time,
       rows = nrow(dfr),
