@@ -16,6 +16,15 @@ dbPull <- function(
     timeTrack <- timeTrack[-1,]
   }
 
+  start_time <- Sys.time()
   dbGetQuery(conn = conn, statement = statement)
+  end_time <- Sys.time()
 
+  if(track){
+    timeTrack <- rbind(timeTrack, data.frame(
+      database = , # Needs to be parsed from the `conn` parameter
+      minutes = end_time - start_time, # Needs to be converted to minutes
+      run_time = start_time
+    ))
+  }
 }
