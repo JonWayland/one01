@@ -35,6 +35,7 @@ dbPull <- function(
       database = as.character("one"),
       minutes = as.numeric(1),
       run_time = Sys.time(),
+      run_time_desc = as.character("now"),
       rows = as.numeric(1),
       columns = as.numeric(1)
     )
@@ -50,6 +51,7 @@ dbPull <- function(
       database = deparse(substitute(conn)),
       minutes = to_mins(end_time - start_time),
       run_time = start_time,
+      run_time_desc = strftime(start_time, format="%I:%M %P", tz = "America/New_York"),
       rows = nrow(dfr),
       columns = ncol(dfr)
     ))
