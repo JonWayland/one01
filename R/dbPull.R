@@ -34,20 +34,24 @@ dbPull <- function(
     timeTrack <- data.frame(
       database = as.character("one"),
       minutes = as.numeric(1),
-      run_time = Sys.time()
+      run_time = Sys.time(),
+      rows = as.numeric(1),
+      columns = as.numeric(1)
     )
     timeTrack <- timeTrack[-1,]
   }
 
   start_time <- Sys.time()
-  dbGetQuery(conn = conn, statement = statement)
+  dfr <- dbGetQuery(conn = conn, statement = statement)
   end_time <- Sys.time()
 
   if(track){
     timeTrack <- rbind(timeTrack, data.frame(
       database = , # Needs to be parsed from the `conn` parameter
       minutes = end_time - start_time, # Needs to be converted to minutes
-      run_time = start_time
+      run_time = start_time,
+      rows = nrow(dfr),
+      columns = ncol(dfr)
     ))
   }
 }
