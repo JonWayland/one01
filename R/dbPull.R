@@ -1,3 +1,14 @@
+#' dbPull - A wrapper for DBI's dbGetQuery
+#'
+#' @param conn
+#' @param statement
+#' @param track
+#' @param reset_track
+#'
+#' @return
+#' @export
+#'
+#' @examples
 dbPull <- function(
   conn,
   statement,
