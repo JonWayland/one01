@@ -4,7 +4,7 @@
 \alias{createDB}
 \title{createDB Creates the `moomy` database in the Global Environment}
 \usage{
-createDB()
+createDB(db = "moomy")
 }
 \value{
 
