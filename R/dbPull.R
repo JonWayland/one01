@@ -17,8 +17,8 @@ dbPull <- function(
 ){
   require(DBI)
   # Database Exists Exception
-  if(!exists(deparse(substitute(DB)))){
-    stop(simpleError(paste0("The database connection `",deparse(substitute(DB)),"` isn't specified. Please be sure to connect to your respective database.")))
+  if(!exists(deparse(substitute(conn)))){
+    stop(simpleError(paste0("The database connection `",deparse(substitute(conn)),"` isn't specified. Please be sure to connect to your respective database.")))
   }
   # Converting other units of time into minutes
   to_mins <- function(difftime){
@@ -44,7 +44,15 @@ dbPull <- function(
   }
 
   start_time <- Sys.time()
-  dfr <- dbGetQuery(conn = conn, statement = statement)
+  dfr <- tryCatch(
+    expr = {
+      dbGetQuery(conn = conn, statement = statement)
+    },
+    error = function(e){
+      message(e)
+      print(e)
+    }
+  )
   end_time <- Sys.time()
 
   if(track){
@@ -54,8 +62,8 @@ dbPull <- function(
       minutes = to_mins(end_time - start_time),
       run_time = start_time,
       run_time_desc = strftime(start_time, format="%I:%M %P", tz = "America/New_York"),
-      rows = nrow(dfr),
-      columns = ncol(dfr)
+      rows = ifelse(!exists("dfr"),0,nrow(dfr)),
+      columns = ifelse(!exists("dfr"),0,ncol(dfr))
     ))
     assign("timeTrack", timeTrack, envir = .GlobalEnv)
   }
