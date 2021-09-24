@@ -67,4 +67,9 @@ dbPull <- function(
     ))
     assign("timeTrack", timeTrack, envir = .GlobalEnv)
   }
+  if(exists("dfr")){
+    return(dfr)
+  } else{
+    writeLines("Query failed.")
+  }
 }
