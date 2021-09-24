@@ -44,13 +44,12 @@ dbPull <- function(
   }
 
   start_time <- Sys.time()
-  dfr <- tryCatch(
+  tryCatch(
     expr = {
-      dbGetQuery(conn = conn, statement = statement)
+      dfr <- dbGetQuery(conn = conn, statement = statement)
     },
     error = function(e){
-      message(e)
-      print(e)
+      message(paste0("Query failed ... ",e))
     }
   )
   end_time <- Sys.time()
@@ -58,7 +57,7 @@ dbPull <- function(
   if(track){
     timeTrack <- rbind(timeTrack, data.frame(
       database = deparse(substitute(conn)),
-      pass_fail = "Pass", # This needs to be the result of a tryCatch
+      pass_fail = ifelse(exists("dfr"), "Pass", "Fail"), # This needs to be the result of a tryCatch
       minutes = to_mins(end_time - start_time),
       run_time = start_time,
       run_time_desc = strftime(start_time, format="%I:%M %P", tz = "America/New_York"),
@@ -69,7 +68,5 @@ dbPull <- function(
   }
   if(exists("dfr")){
     return(dfr)
-  } else{
-    writeLines("Query failed.")
   }
 }
