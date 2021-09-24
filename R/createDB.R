@@ -193,6 +193,7 @@ createDB <- function(db = "moomy"){
     # Placeholder to read in the ICD-10 specific data generated in open health
     icd10 <- readRDS("data\\icd10.rds")
     colnames(icd10) <- toupper(colnames(icd10))
+    icd10 <- data.frame(icd10)
 
     # Placeholder to read in the ADI data
 
