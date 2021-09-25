@@ -207,6 +207,13 @@ createDB <- function(db = "moomy"){
     # saveRDS(cdc,file="data\\cdc.rds")
     cdc <- readRDS("data\\cdc.rds")
 
+    # Smoking Data (2011)
+    # https://data.cdc.gov/Smoking-Tobacco-Use/BRFSS-Prevalence-and-Trends-Data-Tobacco-Use-Four-/ya9m-pyut
+    # smoking <- smoking %>% mutate(State_Parse = gsub("\n.*","",Location.1),
+    #                               GEO_LAT_PARSE = as.numeric(gsub(".*\n\\(|,.*","",Location.1)),
+    #                               GEO_LONG_PARSE = as.numeric(gsub(".* |)","",Location.1)))
+    smoking <- readRDS("data\\smoking.rds")
+
     # In-memory database in R
     healthcon <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
     assign("healthcon", healthcon, env = .GlobalEnv)
@@ -215,6 +222,7 @@ createDB <- function(db = "moomy"){
     DBI::dbWriteTable(healthcon, "FAKE_HEALTHCARE", fh)
     DBI::dbWriteTable(healthcon, "CDC_LOCAL", cdc)
     DBI::dbWriteTable(healthcon, "ICD10_MAP", icd10)
+    DBI::dbWriteTable(healthcon, "SMOKING", smoking)
 
     message("Use the function `dbListTables` from the DBI package to see what tables are available in healthcon Ex: DBI::dbListTables(healthcon)")
     message("\nThe data residing in the FAKE_HEALTHCARE table is entirely fictional data.")
