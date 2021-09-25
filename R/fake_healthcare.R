@@ -7,8 +7,12 @@
 #' \itemize{
 #'  \item PatientID
 #'  \item Age
-#'  \item CC_Count Description
-#'  \item Risk_Count Description
+#'  \item CC_Count Count of chronic conditions
+#'  \item Risk_Count Number of self-reported risks
+#'  \item HP_Paid Total dollar amount paid out by the health insurance company for the member in the past year
+#'  \item Gender
+#'  \item ER_Count Count of emergency room visits in past year
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
 #' }
 #'
 #'
