@@ -188,9 +188,9 @@ createDB <- function(db = "moomy"){
     message("The `healthcon` database gathers data from publicly available sources on the internet.")
 
     # Reading in the fake healthcare data generated for tutorials
-    # fh <- read.csv("https://raw.githubusercontent.com/JonWayland/Fake-Healthcare/master/HP-Universal_DF.csv")
-    # saveRDS(fh, "data\\fake_healthcare.rds")
-    fh <- readRDS("data\\fake_healthcare.rds")
+    # fake_healthcare <- read.csv("https://raw.githubusercontent.com/JonWayland/Fake-Healthcare/master/HP-Universal_DF.csv")
+    # save(fake_healthcare, file = "data\\fake_healthcare.rda")
+    load("data\\fake_healthcare.rda")
 
     # Placeholder to read in the ICD-10 specific data generated in open health
     icd10 <- readRDS("data\\icd10.rds")
