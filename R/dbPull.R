@@ -66,6 +66,11 @@ dbPull <- function(
     ))
     assign("timeTrack", timeTrack, envir = .GlobalEnv)
   }
+  # Share performance of query
+  writeLines(
+    paste0("Your query took approximately ", round(to_mins(end_time - start_time)), " minutes to execute and it returned ", ifelse(!exists("dfr"),0,nrow(dfr)), " rows and ", ifelse(!exists("dfr"),0,ncol(dfr))," columns.")
+  )
+  # Return data
   if(exists("dfr")){
     return(dfr)
   }
