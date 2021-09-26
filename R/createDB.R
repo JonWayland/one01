@@ -221,7 +221,7 @@ createDB <- function(db = "moomy"){
     assign("healthcon", healthcon, env = .GlobalEnv)
     message("The `healthcon` database connection is now set.")
 
-    DBI::dbWriteTable(healthcon, "FAKE_HEALTHCARE", fh)
+    DBI::dbWriteTable(healthcon, "FAKE_HEALTHCARE", fake_healthcare)
     DBI::dbWriteTable(healthcon, "CDC_LOCAL", cdc)
     DBI::dbWriteTable(healthcon, "ICD10_MAP", icd10)
     DBI::dbWriteTable(healthcon, "SMOKING", smoking)
