@@ -219,12 +219,13 @@ createDB <- function(db = "moomy"){
     # In-memory database in R
     healthcon <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
     assign("healthcon", healthcon, env = .GlobalEnv)
-    message("The `healthcon` database connection is now set.")
 
     DBI::dbWriteTable(healthcon, "FAKE_HEALTHCARE", fake_healthcare)
     DBI::dbWriteTable(healthcon, "CDC_LOCAL", cdc)
     DBI::dbWriteTable(healthcon, "ICD10_MAP", icd10)
     DBI::dbWriteTable(healthcon, "SMOKING", smoking)
+
+    message("The `healthcon` database connection is now set.")
 
     message("Use the function `dbListTables` from the DBI package to see what tables are available in healthcon Ex: DBI::dbListTables(healthcon)")
     message("\nThe data residing in the FAKE_HEALTHCARE table is entirely fictional data.")
