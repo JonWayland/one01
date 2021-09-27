@@ -9,7 +9,7 @@
 #' @export
 #'
 #' @examples
-#' createDB('healthcon)
+#' createDB('healthcon')
 #' dbPull(healthcon, "select GEO_LAT, GEO_LONG, DATA_VALUE from CDC_LOCAL where SHORT_QUESTION_TEXT = 'Binge Drinking' limit 5")
 #' # Your query took approximately 0 minutes to execute and it returned 5 rows and 3 columns.
 #' #       GEO_LAT     GEO_LONG DATA_VALUE
