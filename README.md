@@ -34,3 +34,4 @@ Please refer to the **Description** and **Additional Notes** section in order to
 - This is a financial reconciliation to determine the amount MooMy makes, and is highly aduitable (meaning it can't be incorrect)
 - The logged transactions with missing buyer IDs represent "blanket" transactions for these payments to be processed
 - This project _should_ be completed with each step used documented clearly
+- The project should only be considered for the `moomy` DB
