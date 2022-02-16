@@ -25,7 +25,7 @@ This function generates the SQLite database, `moomy`, as well as a vector of bus
 ## `qa()`
 This function maps to the `questions` vector and allows the user to input a SQL query to attempt to answer the specific business question. If the query is incorrect, the user will be given a message telling them so. Similarly, if the SQL query is correct then the user will be informed that they were successful.
 
-## The Project Description
+## Practice Project Description
 The `questions` vector provide the means for the user to gain comfortability with the database and practice their SQL skills; however, the higher-level goal of the MooMy project is to perform the financial reconciliation. In other words, the question that the MooMy leadership team is asking is **how much revenue did their firm earn from the transactions logged in the `moomy` database?**
 
 Please refer to the **Description** and **Additional Notes** section in order to answer this question.
