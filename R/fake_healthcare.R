@@ -1,8 +1,7 @@
 
 #' Fake Healthcare Data
 #'
-#' Health and income outcomes for 184 countries from 1960 to 2016. Also includes two character vectors, \code{oecd}
-#' and \code{opec}, with the names of OECD and OPEC countries from 2016.
+#' Fictional healthcare dataset containing patient demographics, conditions, costs, and health insurance policy information.
 #'
 #' \itemize{
 #'  \item PatientID
@@ -13,6 +12,27 @@
 #'  \item Gender
 #'  \item ER_Count Count of emergency room visits in past year
 #'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item ER_Copay Cost share for emergency room visits
+#'  \item PCP_Copay Cost share for primary care visits
+#'  \item IP_Visits Number of inpatient admissions over the past year
 #' }
 #'
 #'
