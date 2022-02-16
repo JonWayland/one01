@@ -15,3 +15,14 @@ dbPull(conn, statement, track = TRUE, reset_track = FALSE)
 \description{
 dbPull - A wrapper for DBI's dbGetQuery
 }
+\examples{
+createDB('healthcon')
+dbPull(healthcon, "select GEO_LAT, GEO_LONG, DATA_VALUE from CDC_LOCAL where SHORT_QUESTION_TEXT = 'Binge Drinking' limit 5")
+# Your query took approximately 0 minutes to execute and it returned 5 rows and 3 columns.
+#       GEO_LAT     GEO_LONG DATA_VALUE
+# 1 42.35277567  -72.1410545       17.7
+# 2 41.85977566  -71.1572745       21.7
+# 3 45.47428716 -69.69582113       16.0
+# 4 41.50871097 -72.44747892       18.8
+# 5 39.94903266 -74.07454626       17.3
+}
