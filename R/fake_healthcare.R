@@ -12,8 +12,8 @@
 #'  \item Gender
 #'  \item ER_Count Count of emergency room visits in past year
 #'  \item CC_Arthritis Presence of having arthritis (0/1)
-#'  \item CC_Arthritis Presence of having arthritis (0/1)
-#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Asthma Presence of having asthma (0/1)
+#'  \item CC_Atrial_Fibrillation Presence of having atrial fibrillation (0/1)
 #'  \item CC_Arthritis Presence of having arthritis (0/1)
 #'  \item CC_Arthritis Presence of having arthritis (0/1)
 #'  \item CC_Arthritis Presence of having arthritis (0/1)
