@@ -28,8 +28,8 @@
 #'  \item CC_Ischemic_Heart_Disease Presence of having ischemic heart disease (0/1)
 #'  \item CC_Kidney_Disease Presence of having chronic kidney disease (0/1)
 #'  \item CC_Osteoporosis Presence of having osteoporosis (0/1)
-#'  \item CC_Arthritis Presence of having arthritis (0/1)
-#'  \item CC_Arthritis Presence of having arthritis (0/1)
+#'  \item CC_Schizophrenia Presence of having schizophrenia (0/1)
+#'  \item CC_Stroke Presence of having had a stroke (0/1)
 #'  \item ER_Copay Cost share for emergency room visits
 #'  \item PCP_Copay Cost share for primary care visits
 #'  \item IP_Visits Number of inpatient admissions over the past year
