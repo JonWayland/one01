@@ -44,11 +44,8 @@
 #'
 #' @keywords datasets
 #'
-#' @aliases oecd opec
 #'
 #' @examples
 #' data(fake_healthcare)
 #' head(fake_healthcare)
-#' print(oecd)
-#' print(opec)
 "fake_healthcare"
