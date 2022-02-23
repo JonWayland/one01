@@ -5,6 +5,16 @@
 #'
 #' @examples
 #' createDB()
+#'
+#' Loading required package: DBI
+#' Loading required package: RSQLite
+#' The `moomy` database connection is now set.
+#' Use the function `dbListTables` from the DBI package to see what tables are available in MooMy. Ex: DBI::dbListTables(moomy)
+#' Warning message:
+#'   package ‘RSQLite’ was built under R version 4.0.3
+#'
+#'
+#'
 createDB <- function(db = "moomy"){
   # If `db` is not specified then MooMy is the resulting database
   if(!db %in% c('moomy','healthcon')){
