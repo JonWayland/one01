@@ -17,7 +17,8 @@ fuzzE <- function(x, # First string
                   caps = TRUE, # Upper/lower case letters are treated the same
                   rm_spec = TRUE, # Remove special characters
                   rm_numbers = TRUE, # Remove numbers and suffixes (good for name matching)
-                  bump_it = FALSE # In development; rules for increasing score
+                  bump_it = FALSE, # In development; rules for increasing score
+                  us_address = FALSE # In development; apply standardization rules for US addresses
 ){
   if(length(x) != length(y)){
     stop("Incompatible vector lengths")
@@ -51,7 +52,11 @@ fuzzE <- function(x, # First string
 
   score <- function(x,y){
     bump <- 0
+
+    # Leverage `adist` for base score (ordered number of characters that are different)
     score <- as.numeric(1 - adist(x = as.character(x), y = as.character(y)) / max(nchar(as.character(x)), nchar(as.character(y))))
+
+    ## Insert a framework to allow user to specify how bump works - first name emphasis, last name emphasis, number of tokens, etc.
 
     if(score >= 0.8){
 
