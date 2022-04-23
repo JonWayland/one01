@@ -3,8 +3,6 @@
 \docType{data}
 \name{fake_healthcare}
 \alias{fake_healthcare}
-\alias{oecd}
-\alias{opec}
 \title{Fake Healthcare Data}
 \format{
 An object of class \code{"data.frame"}.
@@ -13,8 +11,7 @@ An object of class \code{"data.frame"}.
 data(fake_healthcare)
 }
 \description{
-Health and income outcomes for 184 countries from 1960 to 2016. Also includes two character vectors, \code{oecd}
-and \code{opec}, with the names of OECD and OPEC countries from 2016.
+Fictional healthcare dataset containing patient demographics, conditions, costs, and health insurance policy information.
 }
 \details{
 \itemize{
@@ -26,12 +23,31 @@ and \code{opec}, with the names of OECD and OPEC countries from 2016.
  \item Gender
  \item ER_Count Count of emergency room visits in past year
  \item CC_Arthritis Presence of having arthritis (0/1)
+ \item CC_Asthma Presence of having asthma (0/1)
+ \item CC_Atrial_Fibrillation Presence of having atrial fibrillation (0/1)
+ \item CC_Austism Presence of having autism (0/1)
+ \item CC_Cancer Presence of having cancer (0/1)
+ \item CC_COPD Presence of having chronic obstructive pulmonary disease (0/1)
+ \item CC_Dementia Presence of having dementia (0/1)
+ \item CC_Depression Presence of having depression (0/1)
+ \item CC_Diabetes Presence of having diabetes (0/1)
+ \item CC_Heart_Failure Presence of having heart failure (0/1)
+ \item CC_Hepatitis Presence of having hepatitis (0/1)
+ \item CC_HIV_AIDS Presence of having HIV and/or AIDs (0/1)
+ \item CC_Hyperlipidemia Presence of having hyperlipidemia (0/1)
+ \item CC_Hypertension Presence of having hypertension (0/1)
+ \item CC_Ischemic_Heart_Disease Presence of having ischemic heart disease (0/1)
+ \item CC_Kidney_Disease Presence of having chronic kidney disease (0/1)
+ \item CC_Osteoporosis Presence of having osteoporosis (0/1)
+ \item CC_Schizophrenia Presence of having schizophrenia (0/1)
+ \item CC_Stroke Presence of having had a stroke (0/1)
+ \item ER_Copay Cost share for emergency room visits
+ \item PCP_Copay Cost share for primary care visits
+ \item IP_Visits Number of inpatient admissions over the past year
 }
 }
 \examples{
 data(fake_healthcare)
 head(fake_healthcare)
-print(oecd)
-print(opec)
 }
 \keyword{datasets}
