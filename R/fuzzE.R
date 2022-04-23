@@ -89,7 +89,3 @@ fuzzE <- function(x, # First string
   }
   return(res)
 }
-
-fuzzE("Jason Sanders", "Jay Sanders 2"); fuzzE("Jason Sanders", "Jay Sanders 2", bump_it = TRUE)
-fuzzE("John Wayland", "Jonathan Wayland"); fuzzE("John Wayland", "Jonathan Wayland", bump_it = TRUE)
-fuzzE("Ray Smith", "Kayla Smith"); fuzzE("Ray Smith", "Kayla Smith", bump_it = TRUE)
