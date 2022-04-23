@@ -14,4 +14,14 @@ createDB Creates the `moomy` database in the Global Environment
 }
 \examples{
 createDB()
+
+Loading required package: DBI
+Loading required package: RSQLite
+The `moomy` database connection is now set.
+Use the function `dbListTables` from the DBI package to see what tables are available in MooMy. Ex: DBI::dbListTables(moomy)
+Warning message:
+  package â€˜RSQLiteâ€™ was built under R version 4.0.3
+
+
+
 }
