@@ -195,7 +195,6 @@ createDB <- function(db = "moomy"){
   ### Setting the healthcon database ###
   ######################################
   if(db == 'healthcon'){
-    stop('The `healthcon` database is currently under construction.')
 
     message("The `healthcon` database gathers data from publicly available sources on the internet.")
 
