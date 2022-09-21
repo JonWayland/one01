@@ -2,5 +2,6 @@
 
 export(createDB)
 export(dbPull)
+export(fuzzE)
 export(qa)
 export(showAnswer)

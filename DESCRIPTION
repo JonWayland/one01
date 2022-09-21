@@ -1,7 +1,7 @@
 Package: one01
 Type: Package
 Title: What the Package Does (Title Case)
-Version: 0.1.0
+Version: 0.1.1
 Author: Jon Wayland
 Maintainer: The package maintainer <jonwayland47@gmail.com>
 Description: More about what it does (maybe more than one line)
@@ -9,4 +9,4 @@ Description: More about what it does (maybe more than one line)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1

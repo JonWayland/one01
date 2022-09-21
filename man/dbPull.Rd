@@ -9,9 +9,6 @@ dbPull(conn, statement, track = TRUE, reset_track = FALSE)
 \arguments{
 \item{reset_track}{}
 }
-\value{
-
-}
 \description{
 dbPull - A wrapper for DBI's dbGetQuery
 }
