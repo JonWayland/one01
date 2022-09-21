@@ -4,7 +4,15 @@
 \alias{fuzzE}
 \title{fuzzE}
 \usage{
-fuzzE(x, y, caps = TRUE, rm_spec = TRUE, rm_numbers = TRUE, bump_it = FALSE)
+fuzzE(
+  x,
+  y,
+  caps = TRUE,
+  rm_spec = TRUE,
+  rm_numbers = TRUE,
+  bump_it = FALSE,
+  us_address = FALSE
+)
 }
 \arguments{
 \item{x}{First string}

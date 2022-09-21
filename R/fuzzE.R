@@ -1,5 +1,7 @@
 #' fuzzE
 #'
+#' @export
+#'
 #' @param x First string
 #' @param y Second string
 #' @param caps Boolean for whether upper/lower case letters are treated the same
